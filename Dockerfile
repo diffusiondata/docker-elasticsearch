@@ -14,7 +14,8 @@ RUN tar zxf /tmp/elasticsearch.tar.gz -C /opt && mv /opt/elasticsearch-1.5.2 /op
 RUN /opt/elasticsearch/bin/plugin install elasticsearch/elasticsearch-cloud-aws/2.5.0
 
 # Install Marvel for cluster overview
-RUN /opt/elasticsearch/bin/plugin install elasticsearch/marvel/latest
+# Marvel can only be used in development. Requires a licence in production.
+# RUN /opt/elasticsearch/bin/plugin install elasticsearch/marvel/latest
 
 # Install BigDesk to monitor Elasticsearch
 RUN /opt/elasticsearch/bin/plugin -install lukas-vlcek/bigdesk/2.4.0
