@@ -1,6 +1,6 @@
 # Download and install elasticsearch
 
-FROM debian:jessie
+FROM debian:jessie-backports
 MAINTAINER Push Technology "cloudops@pushtechnology.com"
 
 # Install deps and download elasticsearch
