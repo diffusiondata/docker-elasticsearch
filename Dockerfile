@@ -4,7 +4,7 @@ FROM debian:jessie
 MAINTAINER Push Technology "cloudops@pushtechnology.com"
 
 # Install deps and download elasticsearch
-RUN apt-get update && apt-get install -y wget openjdk-7-jre m4 && apt-get remove openjdk-6-jre
+RUN apt-get update && apt-get install -y wget openjdk-8-jre m4 && apt-get remove openjdk-6-jre
 RUN wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.0.1.tar.gz -O /tmp/elasticsearch.tar.gz 2> /dev/null
 
 # Unzip elasticsearch and put in place
